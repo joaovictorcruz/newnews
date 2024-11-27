@@ -1,5 +1,4 @@
 <?php 
-
 echo 
 '
 <main class="main-container">
