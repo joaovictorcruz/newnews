@@ -2,7 +2,7 @@
 
 $usuario = 'root';
 $senha = '';
-$database = 'usuarios';
+$database = 'newNews';
 $host = 'localhost:3306';
 
 $mysqli = new mysqli($host, $usuario, $senha, $database);

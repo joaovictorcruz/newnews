@@ -1,5 +1,10 @@
 <?php
-if(isset($_POST['email']) || isset($_POST['senha'])) {
+
+    #Base de dados
+    include('./db/conexao.php');
+
+
+    if(isset($_POST['email']) || isset($_POST['senha'])) {
 
     $senha = $mysqli->real_escape_string($_POST['nome']);
     $email = $mysqli->real_escape_string($_POST['email']);
@@ -23,7 +28,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         $_SESSION['nome'] = $usuario['nome'];
         $_SESSION['loginType'] = $usuario['statusUser'];
 
-        header("Location: painel.php");
+        header("Location: home.php");
 
     }
 
