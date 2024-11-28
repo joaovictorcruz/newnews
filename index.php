@@ -8,8 +8,10 @@
 
 
 
-#Cabeçalho
-include './includes/header.php';
+if($pagina != 'login' && $pagina != 'cadastro' ){
+	include './includes/header.php';
+}
+
 
 #iniciar sessão
 session_start();

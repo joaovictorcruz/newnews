@@ -1,6 +1,6 @@
-<?php echo '
+
     <h1>Acesse sua conta</h1>
-    <form action="../controller/cadastro.php" method="POST">
+    <form action="./controller/cadastro.php" method="POST">
         <p>
             <label>Nome</label>
             <input type="text" name="nome" required>
@@ -14,8 +14,14 @@
             <input type="password" name="senha" required>
         </p>
         <p>
+            <select name="statusUser" required>
+                <option>Leitor</option>
+                <option>Escritor</option>
+            </select>
+        </p>
+        <p>
             <button type="submit">Cadastrar</button>
         </p>
     </form>
-';
+
 
