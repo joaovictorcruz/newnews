@@ -21,15 +21,16 @@
 
             if($materias["aprovacao"]){
             echo'
-            <section>
-                <h4>
-                '. $materias['titulo'].'
-                </h4>
-                <p>
-                    '. $materias['conteudo'] .'
-                </p>
-                <h6>Postado por '. $nomeEditor .'</h6> 
-            </section>
+            <div class="row">
+            <div class="col-md-8 col-12 mb-4" id="noticia-destaque">
+                <div class="card">
+                    <img src="https://via.placeholder.com/800x400/6a0dad/ffffff?text=Destaque" class="card-img-top" alt="Notícia em destaque">
+                    <div class="card-body">
+                        <h5 class="card-title">'. $materias['titulo'].'</h5>
+                    </div>
+                </div>
+            </div>
+            </div>
             ';
             }
         }
