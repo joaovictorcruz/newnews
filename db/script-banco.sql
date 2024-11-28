@@ -14,7 +14,8 @@ CREATE TABLE IF NOT EXISTS materias (
     titulo varchar(50),
     conteudo varchar(50),
     codigo varchar(255),
-    tipo varchar(5),
+    formatoImagem varchar(5),
+    visualizações int,
     aprovacao boolean,
     editorId int references usuarios,
     admnistradorId int references usuarios 
@@ -51,5 +52,6 @@ VALUES
 ('Saúde Pública', 'Novo medicamento aprovado pela Anvisa.', TRUE, 8, 1),
 ('Investimento Econômico', 'Empresa investe bilhões em energia limpa.', FALSE, 9, 1),
 ('Teoria Conspiratória', 'Rede social divulga rumores falsos.', FALSE, 6, 3);
+
 
 
