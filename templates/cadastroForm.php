@@ -16,7 +16,7 @@
         <p>
             <select name="statusUser" required>
                 <option>Leitor</option>
-                <option>Escritor</option>
+                <option>editor</option>
             </select>
         </p>
         <p>

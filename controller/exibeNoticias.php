@@ -2,7 +2,7 @@
     #Base de dados
     include('./db/conexao.php');
 
-    $sql_code = "SELECT * FROM materias ";
+    $sql_code = "SELECT * FROM materias WHERE aprovacao ='aprovado' ORDER BY views DESC";
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
 
     if($sql_query->num_rows > 0) {
@@ -24,8 +24,8 @@
             <div class="row">
             <div class="col-md-8 col-12 mb-4" id="noticia-destaque">
                 <div class="card">
-                    <a href="../?pagina=noticia&&noticiaId='.$materias['id'].'">
-                        <img src="https://via.placeholder.com/800x400/6a0dad/ffffff?text=Destaque" class="card-img-top" alt="Notícia em destaque">
+                    <a href="?pagina=noticia&&noticiaId='.$materias['id'].'">
+                        <img src="'.$materias['imagem'].'" class="card-img-top" alt="Notícia em destaque">
                     </a>
                     <div class="card-body card-home">
                         <a href="?pagina=noticia&&noticiaId='.$materias['id'].'">

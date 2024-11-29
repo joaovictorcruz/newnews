@@ -18,10 +18,10 @@ if(isset($_GET['pagina']) && $_GET['pagina'] == "admnistrador"){
     }
 }
 
-if(isset($_GET['pagina']) && $_GET['pagina'] == "editor"){
+if(isset($_GET['pagina']) && $_GET['pagina'] == "escreverNoticia"){
     if(isset($_SESSION['loginType'])){
         if($_SESSION['loginType'] != "editor"){
-            die(header("location: home.php"));
+            die("Você não pode acessar esta página porque não está logado.<p><a href=\"index.php\">Entrar</a></p>");
         }
     }
 }

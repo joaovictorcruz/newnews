@@ -13,14 +13,24 @@
         <div class="container d-flex justify-content-between align-items-center">
             <div class="d-flex">
                 <a href="?pagina=home" class="text-decoration-none mx-2 text-header">Home</a>
+                <?php if(isset($_SESSION['loginType']) && $_SESSION['loginType'] == 'editor'){
+                    echo '<a href="?pagina=escreverNoticia" class="text-decoration-none mx-2 text-header">Publicar</a>';
+                }?>
                 <a href="#" class="text-decoration-none mx-2 text-header">Notícias recentes</a>
                 <a href="#" class="text-decoration-none mx-2 text-header">Em alta</a>
             </div>
             <h1 class="logo" id="logo">NEW NEWS</h1>
             <div class="d-flex">
-                <a href="#" class="text-decoration-none mx-2 text-header">Calendário</a>
-                <a href="?pagina=cadastro" class="text-decoration-none mx-2 text-header">Cadastro</a>
-                <a href="?pagina=login" class="text-decoration-none mx-2 text-header">Login</a>
+                <?php
+                if(isset($_SESSION['id'])){
+                        echo "<p class=mx-2 text-header>Bem-vindo ". $_SESSION['nome'] ."</p>";
+                        echo "<a class=mx-2 text-header href='./includes/logout.php'>LOGOUT </a>";
+                }else{
+                    echo'<a href="?pagina=cadastro" class="text-decoration-none mx-2 text-header">Cadastro</a>
+                        <a href="?pagina=login" class="text-decoration-none mx-2 text-header">Login</a>';
+                }
+                
+                ?>
             </div>
         </div>
     </header>
