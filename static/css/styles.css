@@ -34,16 +34,18 @@ header a:hover {
 }
 
 
-.card-body{
-display: flex;
-flex-direction: row;
-position: relative;
+.card-home{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 .card-title {
     font-size: 1rem;
     font-weight: 600;
     color: #333;
+
 }
 
 .card-img-top {
@@ -62,6 +64,24 @@ a:hover{
     text-decoration: underline;
     color: black;
 }
+.btn{
+    background-color: #832fbe;
+    border-color: #832fbe;
+}
+.btn:hover{
+    background-color: #712aa3;
+    border-color: #712aa3;
+}
+.signIn-link{
+    color: #832fbe;
+    text-decoration: none;
+}
+.signIn-link:hover{
+    text-decoration: underline;
+    color: #712aa3;
+}
+
+
 
 @media (max-width: 768px) {
     #logo {

@@ -12,15 +12,15 @@
     <header class="header-div py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="d-flex">
-                <a href="#" class="text-decoration-none mx-2 text-header">Home</a>
+                <a href="?pagina=home" class="text-decoration-none mx-2 text-header">Home</a>
                 <a href="#" class="text-decoration-none mx-2 text-header">Notícias recentes</a>
                 <a href="#" class="text-decoration-none mx-2 text-header">Em alta</a>
             </div>
             <h1 class="logo" id="logo">NEW NEWS</h1>
             <div class="d-flex">
                 <a href="#" class="text-decoration-none mx-2 text-header">Calendário</a>
-                <a href="#" class="text-decoration-none mx-2 text-header">Cadastro</a>
-                <a href="#" class="text-decoration-none mx-2 text-header">Login</a>
+                <a href="?pagina=cadastro" class="text-decoration-none mx-2 text-header">Cadastro</a>
+                <a href="?pagina=login" class="text-decoration-none mx-2 text-header">Login</a>
             </div>
         </div>
     </header>

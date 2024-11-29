@@ -26,10 +26,8 @@
             </div> 
         </div>
     </main>
+    <hr>
     <main class="container mt-4">
     <h1>Notícias</h1>
     <?php require './controller/exibeNoticias.php'?>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

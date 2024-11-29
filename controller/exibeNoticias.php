@@ -24,10 +24,10 @@
             <div class="row">
             <div class="col-md-8 col-12 mb-4" id="noticia-destaque">
                 <div class="card">
-                    <a href="../index.php?pagina=noticia&&noticiaId='.$materias['id'] .'">
+                    <a href="../?pagina=noticia&&noticiaId='.$materias['id'].'">
                         <img src="https://via.placeholder.com/800x400/6a0dad/ffffff?text=Destaque" class="card-img-top" alt="Notícia em destaque">
                     </a>
-                    <div class="card-body">
+                    <div class="card-body card-home">
                         <a href="?pagina=noticia&&noticiaId='.$materias['id'].'">
                         <h5 class="card-title">'. $materias['titulo'].'</h5>
                         </a>
