@@ -25,23 +25,134 @@ header a:hover {
 }
 
 .logo {
-    height: 85px; /* Define a altura da imagem */
-    margin: 0; /* Remove qualquer margem extra */
-    object-fit: contain; /* Garante que a imagem mantenha as proporções */
-    position: relative; /* Para ajustes finos */
+    height: 85px; 
+    margin: 0; 
+    object-fit: contain; 
+    position: relative; 
     top: 30px;
-    left: -80px; /* Remove deslocamento para a direita */
-    transform: translateX(-10px); /* Centraliza perfeitamente, ajustando manualmente */
+    left: -80px; 
+    transform: translateX(-10px); 
 }
 
-.destaques{
-    margin-bottom: 2%;
+/* destaques da home */
+
+
+/* Título "Destaques" */
+.titulo-destaques {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left; /* Título alinhado à esquerda */
 }
 
+/* Layout principal */
+.destaques-container {
+    display: flex;
+    gap: 30px; /* Espaço entre as colunas */
+    justify-content: center; /* Centraliza o layout */
+    flex-wrap: wrap; /* Permite que o conteúdo seja quebrado para novas linhas em telas pequenas */
+}
+
+/* Div principal de destaque */
+.destaque {
+    flex: 2;
+    max-width: 55%; /* Ajusta a largura para ser responsiva */
+    margin-left: 40px; /* Aumentei a margem para aumentar a distância entre a div principal e as secundárias */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card de destaque */
+.destaque-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Faz a descrição ficar embaixo da imagem */
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #8f8f8f;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 95%;
+    overflow: hidden; /* Evita que o conteúdo ultrapasse o card */
+}
+
+.destaque-img {
+    width: 100%; /* A imagem ocupa toda a largura da div */
+    height: 90%; /* Aumentei a altura da imagem para que fique maior */
+    object-fit: cover; /* Preenche a div sem distorcer */
+    margin-bottom: 10px; /* Diminui o espaço entre a imagem e a descrição */
+}
+
+.destaque-conteudo {
+    text-align: center;
+    word-wrap: break-word; /* Permite quebra de linha em palavras longas */
+    word-break: break-word; /* Força a quebra se necessário */
+    white-space: normal; /* Permite saltar para a linha de baixo */
+}
+
+.destaque-titulo {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5; /* Garante que o título não sobreponha o conteúdo */
+}
+
+.secundarias {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Aumenta o espaçamento entre as divs secundárias */
+}
+
+/* Ajusta o espaço entre as divs secundárias */
+.secundaria {
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    max-width: 65%;
+    margin-bottom: 0; /* Removido o valor negativo para um espaçamento mais controlado */
+}
+
+.secundaria-card {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #8f8f8f;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden; /* Evita que o conteúdo ultrapasse o card */
+}
+
+.secundaria-img {
+    width: 95%; /* Imagem ocupa toda a largura da div */
+    height: 80%; /* Ajuste a altura da imagem aqui */
+    object-fit: cover; /* Ajuste o tamanho da imagem para preencher a div sem distorcer */
+    margin-bottom: 10px;
+}
+
+.secundaria-conteudo {
+    text-align: center;
+    word-wrap: break-word; /* Permite quebra de linha em palavras longas */
+    word-break: break-word; /* Força a quebra se necessário */
+    white-space: normal; /* Permite saltar para a linha de baixo */
+}
+
+.secundaria-titulo {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/*noticias home page*/
 .card {
     border:solid 1px #8f8f8f;
 }
-
 
 .card-home{
     display: flex;
@@ -94,6 +205,10 @@ a:hover{
     display: flex;
     flex-direction: column;
     
+}
+
+.noticias-home {
+    display: none;
 }
 
 @media (max-width: 768px) {
