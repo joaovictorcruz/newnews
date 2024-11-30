@@ -19,7 +19,7 @@
                 <a href="#" class="text-decoration-none mx-2 text-header">Notícias recentes</a>
                 <a href="#" class="text-decoration-none mx-2 text-header">Em alta</a>
             </div>
-            <h1 class="logo" id="logo">NEW NEWS</h1>
+            <img class="logo" src=".\src\logo1.png" alt="Logo NewNews">
             <div class="d-flex">
                 <?php
                 if(isset($_SESSION['id'])){

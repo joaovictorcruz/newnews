@@ -5,13 +5,19 @@ body {
 }
 
 header {
-    background-color: #6a0dad;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    color: white;
+    height: 70px; 
+    background-color: #b192ce; 
+    color: #ffffff; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; 
 }
+
 
 header a {
     color: #ffffff;
+    font-weight: 700;
 }
 
 header a:hover {
@@ -19,10 +25,13 @@ header a:hover {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
+    height: 85px; /* Define a altura da imagem */
+    margin: 0; /* Remove qualquer margem extra */
+    object-fit: contain; /* Garante que a imagem mantenha as proporções */
+    position: relative; /* Para ajustes finos */
+    top: 30px;
+    left: -80px; /* Remove deslocamento para a direita */
+    transform: translateX(-10px); /* Centraliza perfeitamente, ajustando manualmente */
 }
 
 .destaques{
@@ -30,8 +39,7 @@ header a:hover {
 }
 
 .card {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border: none;
+    border:solid 1px #8f8f8f;
 }
 
 
