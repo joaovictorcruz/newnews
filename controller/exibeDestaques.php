@@ -11,10 +11,25 @@ $res = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " .
 if ($res->num_rows > 0) {
     $noticias = $res->fetch_all(MYSQLI_ASSOC);
 
+    $destaque = $noticias[0];
+    $destaqueImagem = $destaque['imagem'];
+    $destaqueTitulo = htmlspecialchars($destaque['titulo']);
+    $destaqueId = $destaque['id'];
+    $secundaria1 = $noticias[1];
+    $secundaria1Imagem = $secundaria1['imagem'];
+    $secundaria1Titulo = htmlspecialchars($secundaria1['titulo']);
+    $secundaria1Id = $secundaria1['id'];
+    $secundaria2 = $noticias[2];
+    $secundaria2Imagem = $secundaria2['imagem'];
+    $secundaria2Titulo = htmlspecialchars($secundaria2['titulo']);
+    $secundaria2Id = $secundaria2['id'];
+
+    /*
     echo '<h1 class="titulo-destaques">Destaques</h1>
         <div class="destaques-container">';
 
-    $destaque = $noticias[0];
+    
+
     echo '<div class="destaque">
             <div class="destaque-card">
                 <img src="'.$destaque['imagem'].'" class="destaque-img" alt="Notícia em destaque">
@@ -36,9 +51,11 @@ if ($res->num_rows > 0) {
                     </div>
                 </div>
               </div>';
-    }
+              */
+    
     echo '</div></div>';
 } else {
     echo '<p>Não há notícias em destaque no momento.</p>';
 }
+    
 ?>

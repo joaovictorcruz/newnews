@@ -6,4 +6,5 @@ if(!isset($_SESSION)) {
 
 session_destroy();
 
-header("Location: ../index.php");
+echo "Voce foi deslogado";
+//header("Location: ../index.php");
