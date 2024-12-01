@@ -2,7 +2,7 @@
     #Base de dados
     include('./db/conexao.php');
 
-    $sql_code = "SELECT * FROM materias WHERE aprovacao ='aprovado' ORDER BY views DESC";
+    $sql_code = "SELECT * FROM materias WHERE aprovacao ='aprovado' ORDER BY created_at DESC";
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
 
     if($sql_query->num_rows > 0) {

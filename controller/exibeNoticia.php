@@ -23,6 +23,7 @@
     $titulo = $materia['titulo'];
     $conteudo = $materia['conteudo'];
     $visualizacoes = $materia['views'];
+    $imagem = $materia['imagem'];
 
     // procura o nome do editor na table usuarios usando o id disponivel na materia
     $editorId = $materia['editorId'];

@@ -34,8 +34,6 @@ header a:hover {
     transform: translateX(-10px); 
 }
 
-/* destaques da home */
-
 
 /* Título "Destaques" */
 .titulo-destaques {
@@ -166,6 +164,9 @@ header a:hover {
     font-weight: 600;
     color: #333;
 
+}
+.card-title a{
+    color: #333;
 }
 
 .card-img-top {
