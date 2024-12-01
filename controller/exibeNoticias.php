@@ -17,13 +17,16 @@ if ($sql_query->num_rows > 0) {
         }
 
         if ($materias["aprovacao"]) {
-            echo '
-            <div class="noticia-linha">
+            echo '<div class="noticia-linha">';
+            if(isset($materias['imagem'])){
+                echo'
                 <div class="noticia-img">
                     <a href="?pagina=noticia&&noticiaId=' . $materias['id'] . '">
                         <img src="' . $materias['imagem'] . '" alt="Imagem da notícia">
                     </a>
-                </div>
+                </div>';
+           };
+            echo'
                 <div class="noticia-detalhes">
                     <a href="?pagina=noticia&&noticiaId=' . $materias['id'] . '">
                         <h3 class="noticia-titulo">' . $materias['titulo'] . '</h3>

@@ -1,6 +1,6 @@
 
 <?php include "./includes/protect.php"?>
-<?php require './controller/novaNoticia.php' ?>
+<?php require './controller/novaNoticia.php'?>
 <div class="container-news custom-news-form">
     <h1 class="form-title">Criar Notícia</h1>
 

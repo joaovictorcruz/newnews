@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+
 header {
     height: 70px; 
     background-color: #b192ce; 
@@ -60,7 +61,7 @@ header a:hover {
 /* Div principal de destaque */
 .destaque {
     flex: 2;
-    max-width: 55%; /* Ajusta a largura para ser responsiva */
+    max-width: 70%; /* Ajusta a largura para ser responsiva */
     margin-left: 40px; /* Aumentei a margem para aumentar a distância entre a div principal e as secundárias */
     box-sizing: border-box;
     display: flex;
@@ -144,6 +145,7 @@ header a:hover {
     word-wrap: break-word; /* Permite quebra de linha em palavras longas */
     word-break: break-word; /* Força a quebra se necessário */
     white-space: normal; /* Permite saltar para a linha de baixo */
+    padding-bottom: 20px;
 }
 
 .secundaria-titulo {
@@ -203,7 +205,9 @@ header a:hover {
     color: #333;
     margin-bottom: 8px;
 }
-
+.card-title a{
+    color: black;
+}
 .noticia-titulo:hover {
     text-decoration: underline;
 }

@@ -1,3 +1,4 @@
+<?php include "./includes/protect.php"?>
 <div class="container mt-4">
         <div class="mb-4">
             <h3 class="mb-3">Notícias Pendentes</h3>
