@@ -22,13 +22,22 @@
         if(!isset($_SESSION)) {
             session_start();
         }
+        $usuarioId = $usuario['id'];
+        $usuarioNome = $usuario['nome'];
+        $usuarioType = $usuario['statusUser'];
+        $_SESSION['id'] = $usuarioId;
+        $_SESSION['nome'] = $usuarioNome;
+        $_SESSION['loginType'] = $usuarioType;
 
-        $_SESSION['id'] = $usuario['id'];
-        $_SESSION['nome'] = $usuario['nome'];
-        $_SESSION['loginType'] = $usuario['statusUser'];
-        echo "login realizado";
+        if (isset($_POST['connect']) && $_POST['connect'] == "on") {
+            setcookie('id', $usuario['id'], time() + 5 * 60, "/", "", true, true);
+            setcookie('nome', $usuario['nome'], time() + 5 * 60, "/", "", true, true);
+            setcookie('loginType', $usuario['statusUser'], time() + 5 * 60, "/", "", true, true);
+        }
+
         header("Location:../index.php?pagina=home");
-
+        exit;
+        
     } else {
         echo "Falha ao logar! E-mail ou senha incorretos";
     }

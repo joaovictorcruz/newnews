@@ -25,7 +25,7 @@
 
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
-                <input type="checkbox" id="connect" class="form-check-input">
+                <input type="checkbox" name="connect" class="form-check-input">
                 <label for="connect" class="form-check-label">Mantenha-me conectado</label>
             </div>
         </div>

@@ -3,6 +3,16 @@
 #iniciar sessão
 session_start();
 
+if(isset($_COOKIE['id'])){
+	$_SESSION['id'] = $_COOKIE['id'];
+}
+if(isset($_COOKIE['nome'])){
+	$_SESSION['nome'] = $_COOKIE['nome'];
+}
+if(isset($_COOKIE['loginType'])){
+	$_SESSION['loginType'] = $_COOKIE['loginType'];
+}
+
 	if(isset($_GET['pagina'])){
 			$pagina = $_GET['pagina'];
 	}
