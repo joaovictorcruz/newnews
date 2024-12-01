@@ -1,47 +1,39 @@
 <?php
-    #Base de dados
-    include('./db/conexao.php');
+# Base de dados
+include('./db/conexao.php');
 
-    
-    $sql_code = "SELECT * FROM materias WHERE aprovacao ='aprovado' ORDER BY created_at DESC";
-    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+$sql_code = "SELECT * FROM materias WHERE aprovacao ='aprovado' ORDER BY created_at DESC";
+$sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
 
-    if($sql_query->num_rows > 0) {
-        
-        
+if ($sql_query->num_rows > 0) {
+    while ($materias = mysqli_fetch_array($sql_query)) {
+        $editorId = $materias['editorId'];
+        $sql_searchEditor = "SELECT nome FROM usuarios WHERE id = '$editorId'";
+        $sql_searchQuery = $mysqli->query($sql_searchEditor) or die("Falha na execução do código SQL: " . $mysqli->error);
 
-        while($materias = mysqli_fetch_array($sql_query)){
-            
-            $editorId = $materias['editorId'];
-            $sql_searchEditor = "SELECT nome FROM usuarios where id = '$editorId' ";
-            $sql_searchQuery = $mysqli->query($sql_searchEditor) or die("Falha na execução do código SQL: " . $mysqli->error);
-            if($sql_searchQuery->num_rows == 1){
-                $editor = $sql_searchQuery->fetch_assoc();
-                $nomeEditor = $editor["nome"];
-            }
+        if ($sql_searchQuery->num_rows == 1) {
+            $editor = $sql_searchQuery->fetch_assoc();
+            $nomeEditor = $editor["nome"];
+        }
 
-            if($materias["aprovacao"]){
-            echo'
-            <div class="row">
-            <div class="col-md-8 col-12 mb-4" id="noticia-destaque">
-                <div class="card">
-                ';
-                if(isset($materias['imagem'])){
-                    echo '<a href="?pagina=noticia&&noticiaId='.$materias['id'].'">
-                        <img src="'.$materias['imagem'].'" class="card-img-top" alt="Notícia em destaque">
-                    </a>';
-                }
-                echo '
-                    <div class="card-body card-home">
-                        <a href="?pagina=noticia&&noticiaId='.$materias['id'].'">
-                        <h5 class="card-title">'. $materias['titulo'].'</h5>
-                        </a>
-                        <h6 class="card-title editor"> Postado por '. $nomeEditor.'</h6>
-                    </div>
+        if ($materias["aprovacao"]) {
+            echo '
+            <div class="noticia-linha">
+                <div class="noticia-img">
+                    <a href="?pagina=noticia&&noticiaId=' . $materias['id'] . '">
+                        <img src="' . $materias['imagem'] . '" alt="Imagem da notícia">
+                    </a>
+                </div>
+                <div class="noticia-detalhes">
+                    <a href="?pagina=noticia&&noticiaId=' . $materias['id'] . '">
+                        <h3 class="noticia-titulo">' . $materias['titulo'] . '</h3>
+                    </a>
+                    <p class="noticia-descricao">' . substr($materias['conteudo'], 0, 100) . '...</p>
+                    <p class="noticia-autor">Postado por ' . $nomeEditor . '</p>
                 </div>
             </div>
-            </div>
             ';
-            }
         }
-    };
+    }
+}
+?>

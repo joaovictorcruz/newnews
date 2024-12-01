@@ -35,8 +35,9 @@ header a:hover {
     object-fit: contain; 
     position: relative; 
     top: 30px;
-    left: -80px; 
+    left: -50px; 
     transform: translateX(-10px); 
+    align-self: center;
 }
 
 
@@ -153,36 +154,74 @@ header a:hover {
 
 
 /*noticias home page*/
-.card {
-    border:solid 1px #8f8f8f;
-}
-
-.card-home{
+.noticia-linha {
     display: flex;
     flex-direction: row;
-    position: relative;
-    flex-wrap: wrap;
+    align-items: center;
+    margin: 15px 0;
+    border: 1px solid #8f8f8f;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 90%; /* Mantendo o limite de largura */
+    max-width: 900px;
 }
 
-.card-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #333;
-
-}
-.card-title a{
-    color: #333;
+.noticia-linha:hover {
+    transform: scale(1.02);
 }
 
-.card-img-top {
-    height: auto;
+/* Imagem da Notícia */
+.noticia-img {
+    width: 25%; /* Diminuído para 25% da largura do container */
+    height: 80%; /* Diminuído para 80% da altura da div principal */
+    padding: 10px; /* Espaçamento interno */
+    box-sizing: border-box;
+}
+
+.noticia-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 5px; /* Suaviza bordas da imagem */
 }
 
-.editor{
-    position: absolute;
-    right: 20px;
+/* Detalhes da Notícia */
+.noticia-detalhes {
+    padding: 15px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.noticia-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.noticia-titulo:hover {
+    text-decoration: underline;
+}
+
+.noticia-descricao {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.noticia-autor {
+    font-size: 0.8rem;
+    color: #777;
+    text-align: right;
+}
+
+
 a{
     text-decoration: none;
 }
@@ -216,6 +255,101 @@ a:hover{
 .noticias-home {
     display: none;
 }
+
+/*formulario criar noticia*/
+
+
+/* Container geral do formulário */
+.container-news {
+    max-width: 600px; /* Limita a largura máxima */
+    margin: 45px auto; /* Centraliza o formulário */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #8f8f8f; /* Cor da borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Título do formulário */
+.container-news h1 {
+    text-align: center; /* Centraliza o título */
+    font-size: 1.8rem; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do texto */
+}
+
+/* Mensagem de feedback */
+.container-news p {
+    text-align: center; /* Centraliza a mensagem */
+    font-size: 1rem; /* Tamanho da mensagem */
+    color: #333; /* Cor da mensagem */
+    margin-bottom: 15px; /* Espaçamento abaixo */
+}
+
+/* Estilização do formulário */
+form {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+/* Labels */
+form label {
+    font-size: 1rem;
+    font-weight: bold; /* Texto em negrito */
+    color: #333; /* Cor do texto */
+    margin-bottom: 5px;
+}
+
+/* Inputs de texto */
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho do texto */
+    border: 1px solid #8f8f8f; /* Cor da borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Fundo leve */
+    outline: none; /* Remove o contorno padrão */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito ao focar no input */
+form input[type="text"]:focus,
+form textarea:focus,
+form input[type="file"]:focus {
+    border-color: #555; /* Cor da borda no foco */
+    background-color: #fff; /* Fundo branco ao focar */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra ao focar */
+}
+
+/* Textarea */
+form textarea {
+    resize: vertical; /* Permite redimensionar apenas na vertical */
+}
+
+/* Botão de envio */
+form button[type="submit"] {
+    padding: 12px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    color: #fff; /* Texto branco */
+    background-color: #b192ce; /* Fundo escuro */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é clicável */
+    transition: all 0.3s ease; /* Transição suave */
+    align-self: center; /* Centraliza o botão */
+}
+
+/* Efeito ao passar o mouse no botão */
+form button[type="submit"]:hover {
+    background-color: #7b44af; /* Fundo mais claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
 
 @media (max-width: 768px) {
     #logo {
