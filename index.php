@@ -30,6 +30,7 @@ if($pagina != 'login' && $pagina != 'cadastro' ){
 
 #Conteúdo da página
 switch ($pagina) {
+	case 'administrador': include 'templates/administrador.php'; break;
 	case 'login': include 'templates/loginForm.php'; break;
 	case 'noticia': include 'templates/noticia.php'; break;
 	case 'cadastro': include 'templates/cadastroForm.php'; break;
