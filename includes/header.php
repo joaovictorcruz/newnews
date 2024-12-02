@@ -34,7 +34,7 @@
                     echo'<a href="?pagina=cadastro" class="text-decoration-none mx-2 text-header">Cadastro</a>
                         <a href="?pagina=login" class="text-decoration-none mx-2 text-header">Login</a>';
                 }
-                
+
                 ?>
             </div>
         </div>
