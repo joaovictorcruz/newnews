@@ -33,7 +33,16 @@
             $editor = $sql_searchQuery->fetch_assoc();
             $nomeEditor = $editor["nome"];
 }
-    
+   
+    if(isset($_SESSION['loginType']) && $_SESSION['loginType'] == 'administrador'){
+        if($materia['aprovacao'] == 'pendente'){
+            $buttons= ' <div class="botoes-aprovacao">
+                            <a href="./controller/aprovacaoNoticia.php?aprovacao=aprovado&&noticiaId='.$noticiaId.'" class="btn btn-success btn-sm text-decoration-none">Aprovar</a>
+                            <a href="./controller/aprovacaoNoticia.php?aprovacao=rejeitado&&noticiaId='.$noticiaId.'" class="btn btn-danger btn-sm text-decoration-none">Recusar</a>
+                        </div>';
+        }
+    }
+
 ?>
 
 

@@ -18,6 +18,7 @@
                             <?php echo $conteudo ?>
                         </p>
                     </div>
+                    <?php if(isset($buttons)){echo $buttons;}?>
                 </div>
             </div>
         </div>

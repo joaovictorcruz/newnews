@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS materias (
     views int,
     aprovacao enum('pendente','aprovado','rejeitado') DEFAULT 'pendente',
     editorId int references usuarios,
-    admnistradorId int references usuarios,
+    administradorId int references usuarios,
     created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -42,7 +42,7 @@ VALUES
 
 
 -- Inserindo matérias
-INSERT INTO materias (titulo, conteudo, views, aprovacao, editorId, admnistradorId)
+INSERT INTO materias (titulo, conteudo, views, aprovacao, editorId, administradorId)
 VALUES
 ('Turnê Mundial do NewJeans Bate Recordes',
     'O grupo de K-pop NewJeans, sensação global, iniciou sua tão aguardada turnê mundial e já está quebrando recordes de público e vendas. A turnê, intitulada "Bunnyland Tour", estreou em Seul com ingressos esgotados em menos de três minutos. Com performances impecáveis e uma produção grandiosa, o grupo atraiu fãs de todo o mundo para a Coreia do Sul. \n\nA turnê segue para outras cidades da Ásia, Europa e Américas, prometendo conquistar novos marcos. Especialistas apontam que a popularidade do NewJeans é resultado da combinação de músicas cativantes, um estilo único e uma forte conexão com os fãs. A líder do grupo, Minji, emocionou o público ao agradecer pelo apoio contínuo e prometeu surpresas especiais para os próximos shows.', 
