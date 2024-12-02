@@ -380,7 +380,14 @@ form button[type="submit"]:hover {
     background-color: #7b44af; /* Fundo mais claro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
 }
+.botoes-aprovacao{
+    display: flex;
+    flex-direction: column;
+}
+.botoes-aprovacao a{
+    margin: 5px;
 
+}
 
 @media (max-width: 768px) {
     #logo {

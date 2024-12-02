@@ -25,6 +25,7 @@
         $usuarioId = $usuario['id'];
         $usuarioNome = $usuario['nome'];
         $usuarioType = $usuario['statusUser'];
+        
         $_SESSION['id'] = $usuarioId;
         $_SESSION['nome'] = $usuarioNome;
         $_SESSION['loginType'] = $usuarioType;
@@ -37,7 +38,7 @@
 
         header("Location:../index.php?pagina=home");
         exit;
-        
+
     } else {
         echo "Falha ao logar! E-mail ou senha incorretos";
     }
