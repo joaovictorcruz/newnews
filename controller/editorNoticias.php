@@ -127,5 +127,5 @@ function exibirNoticiasRejeitadas(){
    };
 
 
-   mysqli_close($mysqli);
+
 ?>
