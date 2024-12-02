@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+
 header {
     height: 70px; 
     background-color: #b192ce; 
@@ -99,7 +100,9 @@ header a:hover {
     color: #333;
     margin-bottom: 8px;
 }
-
+.card-title a{
+    color: black;
+}
 .noticia-titulo:hover {
     text-decoration: underline;
 }

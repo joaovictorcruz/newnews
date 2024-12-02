@@ -75,7 +75,7 @@ VALUES
     'O grupo de K-pop NewJeans anunciou o lançamento de um reality show exclusivo, intitulado "Bunnies Behind the Scenes". O programa, que será transmitido por plataformas digitais, promete mostrar a rotina do grupo, incluindo ensaios, gravações e momentos descontraídos entre as integrantes. \n\nOs fãs terão a oportunidade de conhecer melhor as personalidades de cada integrante e acompanhar de perto os bastidores da produção musical. Segundo a gravadora ADOR, o reality é uma forma de aproximar ainda mais o grupo de seu fandom, oferecendo uma experiência única e autêntica.', 
     0, 'pendente', 6, 3);
 
-INSERT INTO materias (titulo,conteudo,imagem,views,aprovacao,editorId) VALUES("Daniele marca presença no tapete vermelho do evento da Celine","","./db/images/3.png",2000,"aprovado",12);
-INSERT INTO materias (titulo,conteudo,imagem,views,aprovacao,editorId) VALUES("NewJeans aciona 'Coletiva de Imprensa de Emergência' a respeito de seu contrato com ADOR","","./db/images/2.png",2005,"aprovado",12);
-INSERT INTO materias (titulo,conteudo,imagem,views,aprovacao,editorId) VALUES("NewJeans oficializa o fim de seu contrato com ADOR","","./db/images/1.png",3000,"aprovado",12);
+INSERT INTO materias (titulo,conteudo,imagem,views,aprovacao,editorId) VALUES("Daniele marca presença no tapete vermelho do evento da Celine","","./db/images/3.png",2000,"aprovado",8);
+INSERT INTO materias (titulo,conteudo,imagem,views,aprovacao,editorId) VALUES("NewJeans aciona 'Coletiva de Imprensa de Emergência' a respeito de seu contrato com ADOR","","./db/images/2.png",2005,"aprovado",8);
+INSERT INTO materias (titulo,conteudo,imagem,views,aprovacao,editorId) VALUES("NewJeans oficializa o fim de seu contrato com ADOR","","./db/images/1.png",3000,"aprovado",8);
 
