@@ -2,8 +2,8 @@
 <main class="container mt-5 destaques">
     <div class="row justify-content-center mb-3">
         <div class="col-md-8">
-            <h1 class="text-center"><?php echo $titulo ?></h1>
-            <div class="card mt-4">
+            <h1 class="text-center titulo-newcard"><?php echo $titulo ?></h1>
+            <div class="card mt-4 titulo-pageCard">
                 <img src="<?=$imagem?>" class="card-img-top" alt="Notícia em destaque">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mb-3">

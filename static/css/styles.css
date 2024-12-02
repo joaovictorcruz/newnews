@@ -238,6 +238,21 @@ header a:hover {
     color: #333; /* Retirado azul */
 }
 
+/*pagina de exibição de noticias*/
+.card-img-top {
+    width: 100%;     /* A imagem vai ocupar toda a largura da div pai */
+    height: 450px;   /* Defina a altura fixa da imagem */
+    object-fit: cover; /* Faz com que a imagem preencha a área sem distorcer */
+}
+
+.card-body {
+    padding: 15px; /* Ajuste o padding para reduzir o espaço interno */
+}
+
+.titulo-newcard {
+    font-size: 1.8rem;  /* Diminui o tamanho da fonte */
+    margin-bottom: 10px; /* Ajusta o espaçamento inferior */
+}
 
 /*formulario de login*/
 a{
@@ -276,9 +291,6 @@ a:hover{
 }
 
 /*formulario criar noticia*/
-
-
-/* Container geral do formulário */
 .container-news {
     max-width: 600px; /* Limita a largura máxima */
     margin: 45px auto; /* Centraliza o formulário */
