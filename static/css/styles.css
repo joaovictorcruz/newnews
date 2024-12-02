@@ -46,112 +46,8 @@ header a:hover {
     margin-bottom: 20px;
     font-size: 2rem;
     font-weight: bold;
-    margin-left: 50px;
+    margin-left: 35px;
 }
-
-/* Layout principal */
-.destaques-container {
-    display: flex;
-    gap: 30px; /* Espaço entre as colunas */
-    justify-content: center; /* Centraliza o layout */
-    flex-wrap: wrap; /* Permite que o conteúdo seja quebrado para novas linhas em telas pequenas */
-}
-
-/* Div principal de destaque */
-.destaque {
-    flex: 2;
-    max-width: 55%; /* Ajusta a largura para ser responsiva */
-    margin-left: 40px; /* Aumentei a margem para aumentar a distância entre a div principal e as secundárias */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Card de destaque */
-.destaque-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Faz a descrição ficar embaixo da imagem */
-    align-items: center;
-    background-color: #ffffff;
-    border: 1px solid #8f8f8f;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    height: 95%;
-    overflow: hidden; /* Evita que o conteúdo ultrapasse o card */
-}
-
-.destaque-img {
-    width: 100%; /* A imagem ocupa toda a largura da div */
-    height: 90%; /* Aumentei a altura da imagem para que fique maior */
-    object-fit: cover; /* Preenche a div sem distorcer */
-    margin-bottom: 10px; /* Diminui o espaço entre a imagem e a descrição */
-}
-
-.destaque-conteudo {
-    text-align: center;
-    word-wrap: break-word; /* Permite quebra de linha em palavras longas */
-    word-break: break-word; /* Força a quebra se necessário */
-    white-space: normal; /* Permite saltar para a linha de baixo */
-}
-
-.destaque-titulo {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    line-height: 1.5; /* Garante que o título não sobreponha o conteúdo */
-}
-
-.secundarias {
-    flex: 1; /* Ocupa 1 parte do espaço disponível */
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Aumenta o espaçamento entre as divs secundárias */
-}
-
-/* Ajusta o espaço entre as divs secundárias */
-.secundaria {
-    height: auto; /* Ajusta a altura conforme o conteúdo */
-    max-width: 65%;
-    margin-bottom: 0; /* Removido o valor negativo para um espaçamento mais controlado */
-}
-
-.secundaria-card {
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    border: 1px solid #8f8f8f;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    overflow: hidden; /* Evita que o conteúdo ultrapasse o card */
-}
-
-.secundaria-img {
-    width: 95%; /* Imagem ocupa toda a largura da div */
-    height: 80%; /* Ajuste a altura da imagem aqui */
-    object-fit: cover; /* Ajuste o tamanho da imagem para preencher a div sem distorcer */
-    margin-bottom: 10px;
-}
-
-.secundaria-conteudo {
-    text-align: center;
-    word-wrap: break-word; /* Permite quebra de linha em palavras longas */
-    word-break: break-word; /* Força a quebra se necessário */
-    white-space: normal; /* Permite saltar para a linha de baixo */
-}
-
-.secundaria-titulo {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #333;
-}
-
 
 /*noticias home page*/
 .noticia-linha {
@@ -220,9 +116,129 @@ header a:hover {
     color: #777;
     text-align: right;
 }
+/*destaques*/
+
+.destaques-container {
+    display: flex;
+    justify-content: flex-start; /* Destaque no canto esquerdo */
+    align-items: flex-start;
+    gap: 60px; /* Espaçamento entre destaque e secundárias */
+    margin: 0 20px; /* Distância das bordas da tela */
+}
 
 
+.destaque {
+    flex: 3; 
+    max-width: 55%; /* Ajuste na largura (diminuída). Foi 60% anteriormente. */ 
+    box-sizing: border-box;
+}
+
+/* Card de destaque */
+.destaque-card {
+    background-color: #ffffff;
+    border: 1px solid #8f8f8f;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 532px; /* Ajuste na altura (aumentada). Foi ajustado de altura dinâmica para fixa. */
+}
+
+/* Imagem do destaque */
+.destaque-img {
+    width: 100%;
+    height: 85%; /* Proporção da imagem ajustada para se alinhar à nova altura do card. */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Conteúdo do destaque */
+.destaque-conteudo {
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 2px;
+}
+
+.destaque-titulo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Divs secundárias */
+.secundarias {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre as divs secundárias */
+    max-width: 370px;
+}
+
+/* Card de cada notícia secundária */
+.secundaria-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #8f8f8f;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 48%; /* Altura proporcional para alinhar com a div destaque */
+    overflow: hidden;
+}
+
+/* Imagem e conteúdo das secundárias */
+.secundarias {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre as divs secundárias */
+    max-width: 360px;
+}
+
+/* Card de cada notícia secundária */
+.secundaria-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #8f8f8f;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 256px; /* Altura ajustada. Antes estava como 48%. */
+    overflow: hidden;
+}
+
+/* Imagem e conteúdo das secundárias */
+.secundaria-img {
+    width: 100%;
+    height: 170px; /* Ajustada proporcionalmente à nova altura da div secundária */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.secundaria-conteudo {
+    text-align: left;
+    margin-left: 2px; /* Alinhamento com início da imagem */
+}
+
+.secundaria-titulo {
+    font-size: 0.80rem;
+    color: #333;
+    font-weight: 800;
+}
+
+.destaque-titulo a, 
+.secundaria-conteudo a {
+    text-decoration: none;
+    color: #333; /* Retirado azul */
+}
+
+
+/*formulario de login*/
 a{
+    color: #333;
     text-decoration: none;
 }
 a:hover{
