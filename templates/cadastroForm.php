@@ -14,9 +14,9 @@
 <body>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <form id="signupForm" action="./controller/cadastro.php" method="post" class="bg-white p-4 rounded shadow w-100" style="max-width: 480px;">
-            <h1 class="text-center mb-4">Faça seu cadastro</h1>
+            <h1 class="text-center mb-3">Faça seu cadastro</h1>
             
-            <div class="mb-3">
+            <div class="mb-1">
                 <label for="nome" class="form-label">Nome completo</label>
                 <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required>
             </div>
@@ -29,24 +29,24 @@
             </select>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-1">
                 <label for="email" class="form-label">E-mail</label>
                 <input type="email" name="email" class="form-control" placeholder="Digite seu email" required>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-1">
                 <label for="senha" class="form-label">Senha</label>
                 <input type="password" name="senha" class="form-control" placeholder="Crie uma senha" required>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-1">
                 <label for="confirmPassword" class="form-label">Confirme sua Senha</label>
                 <input type="password" id="confirmPassword" class="form-control" placeholder="Confirme sua senha" required>
             </div>
 
             <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
             
-            <div class="text-center mt-3">
+            <div class="text-center">
                 <span>Já tem uma conta? <a href="?pagina=login" class="signIn-link">Entre agora</a></span>
             </div>
         </form>
