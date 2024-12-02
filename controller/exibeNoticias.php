@@ -18,7 +18,7 @@ if ($sql_query->num_rows > 0) {
 
         if ($materias["aprovacao"]) {
             echo '<div class="noticia-linha">';
-            if(isset($materias['imagem'])){
+            if(!empty($materias['imagem'])){
                 echo'
                 <div class="noticia-img">
                     <a href="?pagina=noticia&&noticiaId=' . $materias['id'] . '">

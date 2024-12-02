@@ -19,11 +19,12 @@
                 <?php if(isset($_SESSION['loginType']) && $_SESSION['loginType'] == 'administrador'){
                     echo '<a href="?pagina=administrador" class="text-decoration-none mx-2 text-header">Administrador</a>';
                 }?>
-                <a href="#" class="text-decoration-none mx-2 text-header">Notícias recentes</a>
-                <a href="#" class="text-decoration-none mx-2 text-header">Em alta</a>
             </div>
             <img class="logo" src=".\src\logo1.png" alt="Logo NewNews">
             <div class="d-flex">
+            <?php if(isset($_SESSION['loginType']) && $_SESSION['loginType'] == 'editor'){
+                    echo '<a href="?pagina=editor" class="text-decoration-none mx-2 text-header">Minhas noticias</a>';
+                }?>
                 <?php
                 if(isset($_SESSION['id'])){
                         echo "<p class='mx-2 text-header'>Bem-vindo, ". $_SESSION['nome'] ."</p>";

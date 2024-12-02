@@ -35,6 +35,7 @@ switch ($pagina) {
 	case 'noticia': include 'templates/noticia.php'; break;
 	case 'cadastro': include 'templates/cadastroForm.php'; break;
 	case 'escreverNoticia': include 'templates/noticiaForm.php'; break;
+	case 'editor': include 'templates/editor.php'; break;
     case 'conta' : include 'templates/contaUsuario.php'; break;
 	case 'home': include 'templates/home.php'; break; 
 }
