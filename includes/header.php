@@ -13,6 +13,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <div class="d-flex">
                 <a href="?pagina=home" class="text-decoration-none mx-2 text-header">Home</a>
+                <a href="#noticiasRecentes" class="text-decoration-none mx-2 text-header scroll-to">Notícias recentes</a>
                 <?php if(isset($_SESSION['loginType']) && $_SESSION['loginType'] == 'editor'){
                     echo '<a href="?pagina=escreverNoticia" class="text-decoration-none mx-2 text-header">Publicar</a>';
                 }?>

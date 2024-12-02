@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -34,9 +38,9 @@ header a:hover {
     height: 85px; 
     margin: 0; 
     object-fit: contain; 
-    position: relative; 
+    position: absolute; 
     top: 30px;
-    left: -50px; 
+    left: 40%; 
     transform: translateX(-10px); 
     align-self: center;
 }
