@@ -29,11 +29,10 @@
         $mensagem = "Notícia criada com sucesso e aguardando aprovação!";
     }
         
+   
 
-    }
+}
 
-
-
-    
+mysqli_close($mysqli);
 
 ?>

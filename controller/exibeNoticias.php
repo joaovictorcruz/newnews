@@ -39,4 +39,6 @@ if ($sql_query->num_rows > 0) {
         }
     }
 }
+
+mysqli_close($mysqli);
 ?>

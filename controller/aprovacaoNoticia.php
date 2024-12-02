@@ -18,9 +18,6 @@
         exit;
     }
     
-
-    
-
     #Base de dados
     include('../db/conexao.php');
 
@@ -34,6 +31,4 @@
     header("location:../index.php?pagina=administrador")
 
 ?>
-
-
-    
+ 

@@ -46,7 +46,6 @@
         }
     }
 
+    mysqli_close($mysqli);
 ?>
-
-
-    
+   
