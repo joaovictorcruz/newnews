@@ -16,7 +16,7 @@ if ($sql_query->num_rows > 0) {
     while ($noticiaPendente = mysqli_fetch_array($sql_query)) {
 
         echo '<div class="noticia-linha">';
-        if(isset($noticiaPendente['imagem'])){
+        if(!empty($noticiaPendente['imagem'])){
             echo'
             <div class="noticia-img">
                 <a href="?pagina=noticia&&noticiaId=' . $noticiaPendente['id'] . '">

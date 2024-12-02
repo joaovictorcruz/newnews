@@ -20,7 +20,7 @@ if ($sql_query->num_rows > 0) {
         }
 
         echo '<div class="noticia-linha">';
-        if(isset($noticiaPendente['imagem'])){
+        if(!empty($noticiaPendente['imagem'])){
             echo'
             <div class="noticia-img">
                 <a href="?pagina=noticia&&noticiaId=' . $noticiaPendente['id'] . '">
@@ -71,7 +71,7 @@ function exibirNoticiasAprovadas(){
            }
    
            echo '<div class="noticia-linha">';
-           if(isset($noticiaAprovada['imagem'])){
+           if(!empty($noticiaAprovada['imagem'])){
                echo'
                <div class="noticia-img">
                    <a href="?pagina=noticia&&noticiaId=' . $noticiaAprovada['id'] . '">
@@ -118,7 +118,7 @@ function exibirNoticiasRejeitadas(){
            }
    
            echo '<div class="noticia-linha">';
-           if(isset($noticiaAprovada['imagem'])){
+           if(!empty($noticiaAprovada['imagem'])){
                echo'
                <div class="noticia-img">
                    <a href="?pagina=noticia&&noticiaId=' . $noticiaAprovada['id'] . '">
