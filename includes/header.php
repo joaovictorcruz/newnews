@@ -16,6 +16,9 @@
                 <?php if(isset($_SESSION['loginType']) && $_SESSION['loginType'] == 'editor'){
                     echo '<a href="?pagina=escreverNoticia" class="text-decoration-none mx-2 text-header">Publicar</a>';
                 }?>
+                <?php if(isset($_SESSION['loginType']) && $_SESSION['loginType'] == 'administrador'){
+                    echo '<a href="?pagina=administrador" class="text-decoration-none mx-2 text-header">Administrador</a>';
+                }?>
                 <a href="#" class="text-decoration-none mx-2 text-header">Notícias recentes</a>
                 <a href="#" class="text-decoration-none mx-2 text-header">Em alta</a>
             </div>
