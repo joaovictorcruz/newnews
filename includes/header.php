@@ -39,3 +39,29 @@
             </div>
         </div>
     </header>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Selecione todos os links de navegação que apontam para âncoras
+    document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Previne o comportamento padrão de navegação
+
+            // Obtém o id do link clicado (href)
+            const targetId = this.getAttribute('href').substring(1); // remove o "#"
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Obtém a posição do alvo no topo da página
+                const targetOffset = targetElement.getBoundingClientRect().top + window.scrollY;
+
+                // Realiza a animação de rolagem suave
+                window.scrollTo({
+                    top: targetOffset - 100,  // Ajuste o deslocamento de 100px
+                    behavior: 'smooth'         // Define a animação suave
+                });
+            }
+        });
+    });
+});
+    </script>

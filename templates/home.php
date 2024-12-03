@@ -31,7 +31,7 @@
     </div>
 </main>
 
-<hr id="noticiasRecentes">
+<hr id="noticiasRecentes" class="slide-in">
 
 <main class="container mt-4" class="noticias-home" id="noticias">
 <h1 class="titulo-destaques">Notícias</h1>
