@@ -29,7 +29,7 @@
                 <?php
                 if(isset($_SESSION['id'])){
                         echo "<p class='mx-2 text-header'>Bem-vindo, ". $_SESSION['nome'] ."</p>";
-                        echo "<a class='mx-2 text-header' href='./includes/logout.php'>LOGOUT </a>";
+                        echo "<a class='mx-2 text-header' href='./includes/logout.php'>Logout</a>";
                 }else{
                     echo'<a href="?pagina=cadastro" class="text-decoration-none mx-2 text-header">Cadastro</a>
                         <a href="?pagina=login" class="text-decoration-none mx-2 text-header">Login</a>';

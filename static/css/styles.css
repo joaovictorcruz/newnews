@@ -340,7 +340,6 @@ form label {
 }
 
 /* Inputs de texto */
-form input[type="text"],
 form textarea,
 form input[type="file"] {
     width: 100%; /* Ocupa toda a largura disponível */
@@ -355,7 +354,6 @@ form input[type="file"] {
 }
 
 /* Efeito ao focar no input */
-form input[type="text"]:focus,
 form textarea:focus,
 form input[type="file"]:focus {
     border-color: #555; /* Cor da borda no foco */

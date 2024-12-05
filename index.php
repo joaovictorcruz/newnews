@@ -1,6 +1,5 @@
 <?php
 
-#iniciar sessão
 session_start();
 
 if(isset($_COOKIE['id'])){
